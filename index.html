@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Weather Forecast</p>
+          <h1>Fast local weather in your browser</h1>
+          <p>Search a city or use your location to see a 7-day forecast powered by Open-Meteo.</p>
+        </div>
+
+        <div class="search-card">
+          <label for="searchInput">City name</label>
+          <div class="search-row">
+            <input id="searchInput" type="text" placeholder="e.g. San Francisco" />
+            <button id="searchButton" type="button">Search</button>
+          </div>
+          <div class="units-row">
+            <label for="unitSelect">Units</label>
+            <select id="unitSelect">
+              <option value="celsius">°C</option>
+              <option value="fahrenheit">°F</option>
+            </select>
+          </div>
+          <button id="geoButton" type="button" class="secondary">Use current location</button>
+          <p id="statusText" class="status-text"></p>
+        </div>
+      </section>
+
+      <section id="weatherSection" class="weather-section hidden">
+        <div class="current-weather-card">
+          <div class="weather-header">
+            <div>
+              <p class="location-name" id="locationName"></p>
+              <p class="weather-summary" id="weatherSummary"></p>
+            </div>
+            <div class="current-temp" id="currentTemp"></div>
+          </div>
+          <div class="weather-details">
+            <div>
+              <span>Wind</span>
+              <strong id="windSpeed"></strong>
+            </div>
+            <div>
+              <span>High / Low</span>
+              <strong id="tempRange"></strong>
+            </div>
+            <div>
+              <span>Sunrise</span>
+              <strong id="sunriseTime"></strong>
+            </div>
+            <div>
+              <span>Sunset</span>
+              <strong id="sunsetTime"></strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="forecast-grid" id="forecastGrid"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
